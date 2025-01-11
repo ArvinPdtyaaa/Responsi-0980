@@ -2,30 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- title area -->
-    <title> Halaman {% block judul %} {% endblock %}</title>
+    <title> Halaman {% block judul %} {% endblock %} </title>
 
-    <!-- CSS area -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/AdminLTE.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/booststrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/adminlte.css')}}">
 
-    <!-- CSS font area-->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='font/sansPro.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='font/sansPro.css')}}">
 </head>
-
 <body>
-<!-- content area -->
-    <div class="content-wrapper">
-        <section class="content-header">
+    <div class="conten-wrapper">
+        <section class="conten-header">
             <h1>
                 <a href="/">
-                    <img src="{{ url_for('static', filename='img/amikom_logo.png') }}" style="width: 40px;">
+                    <img src="{{ url_for('static', filename='img/Logo_Gram.png') }}"
+                         style="width: 40px;">
                 </a>
                 Data Mahasiswa
                 <small>Teknik Komputer</small>
             </h1>
         </section>
-
         <section class="content">
             <div class="row">
                 <div class="col-xs-12">
@@ -33,21 +28,16 @@
                         <div class="box-header">
                             {% block JudulKonten %} {% endblock %}
                         </div>
-
-                        <!-- data table (database) area -->
                         <div class="box-body">
-                            {% block Konten %} {% endblock %}
+                            {% block konten %} {% endblock %}
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>   
         </section>
     </div>
-
-<!-- Javascript area -->
-<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-<script src="{{ url_for('static', filename='js/adminlte.min.js') }}"></script>
+<script src="{{url_for('static', filename='js/bootstrap.min,js')}}"></script>  
+<script src="{{url_for('static', filename='js/adminlte.min,js')}}"></script>  
 
 </body>
-
 </html>
